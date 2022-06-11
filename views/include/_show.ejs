@@ -1,0 +1,19 @@
+<% for(var i = 0; i < floods.length; i++) { %>
+<tr>
+    <td><%= i + 1 %></td>
+    <td><%= floods[i].floodname %></td>
+    <td><%= floods[i].StartDate %></td>
+    <td><%= floods[i].EndDate %></td>
+    <td><%= floods[i].CountryName %></td>
+    <td><%= floods[i].SatelliteName %></td>
+   
+    <td>
+        <a href="/update-flood?id=<%= floods[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a></td>
+       <td><a class="btn border-shadow delete" data-id=<%= floods[i]._id%> >
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

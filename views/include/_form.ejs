@@ -1,0 +1,76 @@
+<!-- form handling -->
+
+<form action="/api/flood" method="POST" id="add_flood">
+    <div class="new_flood">
+        <!-- <div class="form-group">
+            <label for="name" class="text-light">Flood Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="floodname" value="" placeholder="flood-jan2019" required>
+        </div>
+        <div class="form-group">
+
+            <label for="start-date" class="text-light">Flood Start Date</label><br>
+            <input type="date" name="StartDate" id="date_timepicker_end">
+
+
+        </div>
+        <div class="form-group">
+
+            <label for="end-date" class="text-light">Flood End Date</label><br>
+            <input type="date" id="enddate" name="EndDate" required>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="country" class="text-light">Country</label><br>
+
+            <select id="countries" name="CountryName">
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Japan">Japan</option>
+                <option value="Laos">Laos</option>
+                <option value="Thailand">Thailand</option>
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="country" class="text-light">Satellites Sensors</label><br>
+
+            <select id="satellites" name="SatelliteName">
+                <option value="Planet">Planet</option>
+                <option value="Sentinel-I">Sentinel-I</option>
+                <option value="Sentinel-II">Sentinel-II</option>
+                <option value="DigitalGlobe">Digital Globe</option>
+                <option value="Alos-II">Alos-II</option>
+            </select>
+
+        </div> -->
+        <div class="form-group">
+            <!-- <label class="text-light">Upload a CSV file</label><br>
+
+            <input type="file" name="filename" id="filename"><br>
+            <label class="text-light">Mongodb Only take data in JSON format</label><br>
+            <input type="button" id="upload"   value="ConvertToJson">
+
+            <div> <br><textarea class="jsondiv" id="flooddata" class="form-control input save" rows="18"
+                    spellcheck="false" style="width:100%;" name="FloodCSVData" required>
+
+            </textarea>
+            </div> -->
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="file" name="csv"><br><br>
+             <div class="text-center"><button type="submit" class="btn btn-lg btn-primary">submit</button></div>   
+            </form>
+        </div>
+
+
+
+        <!-- <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div> -->
+
+    </div>
+</form>

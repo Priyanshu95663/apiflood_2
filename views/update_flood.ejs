@@ -1,0 +1,86 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        
+            
+            <div class="form-title text-center">
+                <h2 class="text-dark">Update Flood</h2>
+                <span class="text-light">Use the below form to Update a Flood</span>
+            </div>
+
+            <!-- add user form -->
+            <!-- form handling -->
+            <form   method="POST"   enctype="multipart/form-data" id="update_flood">
+                <div class="new_flood">
+                    <div class="form-group">
+                        <label for="floodname" class="text-light">Flood Name</label>
+                        <input type="hidden" name="id" value="<%= flood._id %>">
+                        <input type="text" name="floodname" value="<%= flood.floodname %>" placeholder="Mark Stoenis">
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="start-date" class="text-light">Flood Start Date</label><br>
+                        <input type="date" id="startdate" name="StartDate" required  value="<%= flood.StartDate %>" >
+
+                    </div>
+                    <div class="form-group">
+
+                        <label for="end-date" class="text-light">Flood End Date</label><br>
+                        <input type="date" id="enddate" name="EndDate"  value="<%= flood.EndDate %>" required>
+
+                    </div>
+                    <div class="form-group">
+
+                        <label for="country" class="text-light">Country</label><br>
+
+                        <select id="countries" name="CountryName"  >
+                            <option value="Bangladesh"  <%= flood.CountryName == 'Bangladesh' ? 'selected' : ''%>>Bangladesh</option>
+                            <option value="Cambodia"  <%= flood.CountryName == 'Cambodia' ? 'selected' : ''%>>Cambodia</option>
+                            <option value="India"  <%= flood.CountryName == 'India' ? 'selected' : ''%>>India</option>
+                            <option value="Indonesia"  <%= flood.CountryName == 'Indonesia' ? 'selected' : ''%>>Indonesia</option>
+                            <option value="Japan"  <%= flood.CountryName == 'Japan' ? 'selected' : ''%>>Japan</option>
+                            <option value="Laos"  <%= flood.CountryName == 'Laos' ? 'selected' : ''%>>Laos</option>
+                            <option value="Thailand"  <%= flood.CountryName == 'Thailand' ? 'selected' : ''%>>Thailand</option>
+                            <option value="Malaysia"  <%= flood.CountryName == 'Malaysia' ? 'selected' : ''%>>Malaysia</option>
+                            <option value="Myanmar"  <%= flood.CountryName == 'Myanmar' ? 'selected' : ''%>>Myanmar</option>
+                            <option value="Philippines"  <%= flood.CountryName == 'Philippines' ? 'selected' : ''%>>Philippines</option>
+                            <option value="Srilanka"  <%= flood.CountryName == 'Srilanka' ? 'selected' : ''%>>Srilanka</option>
+                            <option value="Vietnam"  <%= flood.CountryName == 'Vietnam' ? 'selected' : ''%>>Vietnam</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="country" class="text-light">Satellites Sensors</label><br>
+
+                        <select id="satellites" name="SatelliteName"  >
+                            <option value="Planet"  <%= flood.SatelliteName == 'Planet' ? 'selected' : ''%>>Planet</option>
+                            <option value="Sentinel-I"  <%= flood.SatelliteName == 'Sentinel-I' ? 'selected' : ''%>>Sentinel-I</option>
+                            <option value="Sentinel-II"  <%= flood.SatelliteName == 'Sentinel-II' ? 'selected' : ''%>>Sentinel-II</option>
+                            <option value="DigitalGlobe"  <%= flood.SatelliteName == 'DigitalGlobe' ? 'selected' : ''%>>Digital Globe</option>
+                            <option value="Alos-II" <%= flood.SatelliteName == 'Alos-II' ? 'selected' : ''%>>Alos-II</option>
+                        </select>
+
+                    </div>
+                    <div class="form-group"> 
+                        <label class="text-light">Upload a CSV file</label><br>
+                
+                    <input type="file" name="csv"><br><br>
+                  <button type="submit" class="btn btn-lg btn-primary">Submit</button> </div>
+
+                </div>
+               
+            </form>
+
+        </div>
+    </main>
+    <!-- /Main Site -->
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->
